@@ -1,5 +1,5 @@
 # Wheelchair_DistanceEstimation
-此專案和資策會合作，在電動輪椅上加兩個 pi camera 鏡頭與平板即時的偵測前方物體距離，警示使用者(開發版為 Jeston Nano)
+此專案和資策會合作，在電動輪椅上加兩個 pi camera 鏡頭與平板即時的偵測前方物體距離，警示使用者(開發板為 Jeston Nano)
 ## 使用 tenson RT :
 > 1. 請自先訓練完 darknet 的 weights，以得到 **.weights** 和 **.cfg** 檔
 > 2. 將 **.weights** 和 **.cfg** 檔放入```/dual_camera/yolo```裡，並修改檔名(檔名最後要是數字，為輸入的大小)
