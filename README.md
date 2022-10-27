@@ -35,3 +35,5 @@ $ python3 trt_SingleDistanceEstimation_dualcam_bigmap.py --onboard 0 -c 80 -m yo
 $ cd dual_camera
 $ python3 trt_SingleDistanceEstimation_dualcam_informationIndustry.py --onboard 0 -c 80 -m yolov4-tiny-416 --width 640 --height 480
 ```
+### 備註 :
+> TensorRT 代碼參考 [https://github.com/d246810g2000/trt_yolov4-tiny](https://github.com/d246810g2000/trt_yolov4-tiny)
