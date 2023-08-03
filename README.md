@@ -1,10 +1,11 @@
 # Wheelchair_DistanceEstimation
 在電動輪椅上加兩個 pi camera 鏡頭與平板即時的偵測前方物體距離，警示使用者(開發板為 Jeston Nano)
 ***
-## TensorRT 安裝 :  
+## TensorRT 與 mqtt 安裝 :  
 * 使用 TensorRT 進行推論加速，讓 yolo 的辨識 FPS 更快。  
 ```shell
 $ cd Wheelchair_DistanceEstimation
+$ pip3 install paho-mqtt
 $ bash install_protobuf-3.8.0.sh
 $ pip3 install onnx==1.4.1
 $ ./install_pycuda.sh
