@@ -1,5 +1,21 @@
 # Wheelchair_DistanceEstimation
 在電動輪椅上加兩個 pi camera 鏡頭與平板即時的偵測前方物體距離，警示使用者(開發板為 Jeston Nano)
+***
+## TensorRT 安裝 :  
+* 使用 TensorRT 進行推論加速，讓 yolo 的辨識 FPS 更快。  
+```shell
+$ cd Wheelchair_DistanceEstimation
+$ bash install_protobuf-3.8.0.sh
+$ pip3 install onnx==1.4.1
+$ ./install_pycuda.sh
+$ cd plugins/
+$ make -j4
+```
+### 備註 :  
+> 1. 若編譯失敗需要重新編譯的話，下 ``` $ make clean ```，在 ``` $ make -j4 ```。  
+> 2. 上面執行的過程，需要 1~2 個小時的時間。
+***
+
 ## 使用 Tenson RT :
 > 1. 請自先訓練完 darknet 的 weights，以得到 **.weights** 和 **.cfg** 檔
 > 2. 將 **.weights** 和 **.cfg** 檔放入```/dual_camera/yolo```裡，並修改檔名(檔名最後要是數字，為輸入的大小)
@@ -9,7 +25,7 @@ $ python3 yolo_to_onnx.py -c 80 -m yolov4-tiny-416
 ```
 > (80 為 classes 的數量)
 ```shell
-$ python3 onnx_to_tensorrt.py -c 4 -m yolov4-tiny-416
+$ python3 onnx_to_tensorrt.py -c 80 -m yolov4-tiny-416
 ```
 > (80 為 classes 的數量)
 ***
